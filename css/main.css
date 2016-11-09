@@ -1,27 +1,34 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+  background-image: url(../graphite.jpg);
+}
 
-/* Enable these styles if you wish to go into a grid layout.
+.search-title {
+  text-align: center;
+  font-family: times;
+  color: rgba(251,224,223,1);
+}
 ul#images li {
-    width: 120px;
+    width: 200px;
     height: auto;
     display: inline-block;
     position: relative;
     float: left;
+    margin: 5px;
 }
 
 ul#images li img {
     display: inline-block;
     width: 100%;
-    height: auto;
+    height: 200px
 }
 
 ul#images li button {
     display: inline-block;
 }
 
---- End of grid layout styles. */
 
 ul#images {
     list-style-type: none;
@@ -42,6 +49,11 @@ ul#images .placeholder {
 hr {
     clear:both;
 }
+div {
+  font-size: 0;
+}
+
+
 
 
 
