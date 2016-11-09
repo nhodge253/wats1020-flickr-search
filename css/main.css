@@ -10,6 +10,12 @@ body {
   font-family: times;
   color: rgba(251,224,223,1);
 }
+
+.navbar-brand {
+  font-family: times;
+  color: rgba(251,224,223,1);
+}
+
 ul#images li {
     width: 200px;
     height: auto;
