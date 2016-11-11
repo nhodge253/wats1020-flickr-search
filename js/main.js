@@ -42,7 +42,7 @@ $(document).on('ready', function() {
 
           // setting list item to new list 
 
-          //$('<img>').attr("src", item.media.m).attr("title", item.title).attr("alt", item.description).appendTo(newList);
+          $('<img>').attr("src", item.media.m).attr("title", item.title).attr("alt", item.description).appendTo(newList);
 
         var infoTitle =  $('<p>').html("Title : " + item.title).appendTo(newList);
         var infoDate =  $('<p>').text("Date/Time : " + item.date_taken).appendTo(newList);
