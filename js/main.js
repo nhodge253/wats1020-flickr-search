@@ -34,26 +34,24 @@ $(document).on('ready', function() {
         tags: tags,
         tagmode: "any",
         format: "json"
-      })
-      // after ajax do this bellow 
-      .done(function(data) {
+      }).done(function(data) {
         $('#images').empty();
         //function for each items pulled from Flickr then return count and item 
         $.each(data.items, function(i, item) {
-          var newList = $('<li class="item">'); // Creates new list with a class item in the HTML. Will be used for CSS styling as well 
+          var newList = $('<li>'); // Creates new list with a class item in the HTML. Will be used for CSS styling as well 
 
           // setting list item to new list 
 
-          $('<img>').attr("src", item.media.m).attr("title", item.title).attr("alt", item.description).appendTo(newList);
+          //$('<img>').attr("src", item.media.m).attr("title", item.title).attr("alt", item.description).appendTo(newList);
 
-          $('<p></p>').text("Title : " + item.title).appendTo(newList);
-          $('<p></p>').text("Date/Time : " + item.date_taken).appendTo(newList);
-          $('<p></p>').text("Author : " + item.author).appendTo(newList);
-          $('<a></a>').attr('href', item.link).text('View on Flickr.').appendTo(newList);
+        var infoTitle =  $('<p>').html("Title : " + item.title).appendTo(newList);
+        var infoDate =  $('<p>').text("Date/Time : " + item.date_taken).appendTo(newList);
+        var infoAuthor = $('<p>').text("Author : " + item.author).appendTo(newList);
+         var infoLink = $('<a>').attr('href', item.link).text('View on Flickr.').appendTo(newList);
 
 
           // then appent the list to the image here
-          newList.appendTo("#images");
+          newList.appendTo('#images');
           // after 10 pictures discontinue list 
           if (i === 21) {
             return false;
@@ -63,8 +61,10 @@ $(document).on('ready', function() {
   }
   // I changed the footer text with Jquery.
   $("footer").text("Nate Hodge, WATS3020, Fall 2016.");
-
 });
+
+
+
     // Create a function called `searchImages()`. This function will handle the
     // process of taking a user's search terms and sending them to Flickr for a
     // response.
